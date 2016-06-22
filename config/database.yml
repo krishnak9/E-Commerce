@@ -9,16 +9,20 @@ default: &default
   pool: 5
   timeout: 5000
 
-development:
+test:
   <<: *default
   database: db/development.sqlite3
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
 # Do not set this db to the same as development or production.
-test:
-  <<: *default
-  database: db/test.sqlite3
+development:
+  adapter: mysql2
+  host: localhost 
+  database: ecommerce
+  username: root
+  password: sql
+  reconnect: true 
 
 production:
   <<: *default
