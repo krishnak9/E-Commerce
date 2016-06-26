@@ -3,3 +3,4 @@
 
 This tool provides the Analysis of E-commerce sales and growth.
 
+This uses different Jquery web graphs to plot the data.
