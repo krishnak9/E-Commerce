@@ -1,26 +1,16 @@
-%h1 Listing products
-
-%table
-  %thead
-    %tr
-      %th Title
-      %th Description
-      %th Image url
-      %th Price
-      %th
-      %th
-      %th
-
-  %tbody
-    - @products.each do |product|
-      %tr
-        %td= product.title
-        %td= product.description
-        %td= product.image_url
-        %td= product.price
-        %td= link_to 'Show', product
-        %td= link_to 'Edit', edit_product_path(product)
-        %td= link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+%h1 Product Listing
+- @products.each do |product|
+  .row
+    .col-xs-12
+      = product.title
+    .col-xs-4    
+      = product.description
+    .col-xs-4   
+      = product.price
+    .col-xs-4
+      = link_to 'Show', product
+      = link_to 'Edit', edit_product_path(product)
+      = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
