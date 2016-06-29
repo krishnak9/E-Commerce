@@ -7,16 +7,40 @@
           %li= msg
 
   .field
-    = f.label :title
-    = f.text_field :title
+    .row
+      .col-xs-4
+      .col-xs-2
+        = f.label :title
+      .col-xs-3    
+        = f.text_field :title
+      .col-xs-3    
   .field
-    = f.label :description
-    = f.text_area :description
+    .row
+      .col-xs-4
+      .col-xs-2
+        = f.label :description
+      .col-xs-3
+        = f.text_area :description
+      .col-xs-3    
   .field
-    = f.label :image_url
-    = f.text_field :image_url
+    .row
+      .col-xs-4
+      .col-xs-2
+        = f.label :image_url
+      .col-xs-3
+        = f.text_field :image_url
+      .col-xs-3
   .field
-    = f.label :price
-    = f.text_field :price
+    .row
+      .col-xs-4
+      .col-xs-2
+        = f.label :price
+      .col-xs-3    
+        = f.text_field :price
+      .col-xs-3
   .actions
-    = f.submit 'Save'
+    .row
+      .col-xs-4
+      .col-xs-4
+        = f.submit 'Save'
+      .col-xs-4   
