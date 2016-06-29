@@ -1,21 +1,36 @@
 %h1 Product Listing
+.row
+  .col-xs-4
+    %h3 Product and Description
+  .col-xs-1
+    %h3 Price
+  .col-xs-3
+    %h3 Image
+  .col-xs-2
+    %h3 Options
 - @products.each do |product|
   %ul.list-group
     %li.list-group-item  
       .row
         .col-xs-12
-          = product.title
+          %h4
+            = product.title
       .row      
         .col-xs-4    
           = product.description
-        .col-xs-1   
+        .col-xs-1
+          Rs.
           = product.price
         .col-xs-3
           %img.img-responsive{:src=>product.image_url}
         .col-xs-2
-          = link_to 'Show', product
-          = link_to 'Edit', edit_product_path(product)
-          = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
+          %ul.list-group
+            %li.list-group-item
+              = link_to 'Show', product
+            %li.list-group-item
+              = link_to 'Edit', edit_product_path(product)
+            %li.list-group-item 
+              = link_to 'Destroy', product, :method => :delete, :data => { :confirm => 'Are you sure?' }
 
 %br
 
