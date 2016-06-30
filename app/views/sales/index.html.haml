@@ -1,0 +1,15 @@
+.underlay  
+  %nav.navbar.navbar-default{:style=>"box-shadow:0 0 3px;"}
+    .container-fluid
+      .navbar-header
+        %button.navbar-toggle.collapsed{"data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+          %span.sr-only Toggle navigation
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        %a.navbar-brand{:href => "#"} Sales
+  .row
+  .col-md-6
+    .graph-1#sale_trend
+  .col-md-6
+    .graph-1#sale_bar
