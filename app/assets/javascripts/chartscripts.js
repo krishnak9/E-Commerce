@@ -1,8 +1,8 @@
 
-var ctx = document.getElementById("myChart");
+
 $(document).ready(function (){
-  var ctx = document.getElementById("myChart");
-var myChart = new Chart(ctx, {
+  var ctx = document.getElementById("sale_trend");
+  var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
         labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
