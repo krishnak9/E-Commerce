@@ -9,9 +9,13 @@
           %span.icon-bar
         %a.navbar-brand{:href => "#"} Sales
   .row
-  .col-md-6
+  .col-md-12
     .graph-1
       %canvas#sale_trend
-  .col-md-6
-    .graph-1
-      %canvas#sale_bar
+  
+      
+:javascript
+   sales = #{@sales}
+   $(document).ready(function (){
+     console.log(sales);
+   })
