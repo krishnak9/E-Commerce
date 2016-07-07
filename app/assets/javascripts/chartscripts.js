@@ -1,30 +1,30 @@
-
-
 $(document).ready(function (){
+  saledata = sales;
+  console.log(saledata);
+  var data =[];
+  var labels = [];
+  var colors = [];
+  for (var i=0; i<saledata.length; i++){
+     data[i] = saledata[i][3];
+     labels[i] = saledata[i][5];
+     if (i%2==0) 
+      colors[i] = "rgb(244,67,54)";
+     else 
+       colors[i]= "rgb(33,150,243)";
+  }
+  console.log(data);
+  console.log(labels);
+    
   var ctx = document.getElementById("sale_trend");
   var myChart = new Chart(ctx, {
     type: 'bar',
     data: {
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        labels: labels,
+        
         datasets: [{
             label: '# of Votes',
-            data: [12, 19, 3, 5, 2, 3],
-            backgroundColor: [
-                'rgba(255, 99, 132, 0.8)',
-                'rgba(54, 162, 235, 0.8)',
-                'rgba(255, 206, 86, 0.8)',
-                'rgba(75, 192, 192, 0.8',
-                'rgba(153, 102, 255, 0.8)',
-                'rgba(255, 159, 64, 0.8)'
-            ],
-            borderColor: [
-                'rgba(255,99,132,1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
-            ],
+            data: data,
+            backgroundColor: "rgb(33,150,243)",    
             borderWidth: 1
         }]
     },
